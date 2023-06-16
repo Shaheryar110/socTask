@@ -2,10 +2,106 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 1rem;
-    margin-top: 1rem;
+    
   }
+  .dropdowncontainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    z-index: 1;
+   gap: 7.67px;
+    width: 50%;
+  }
+  .dropdownbutton {
+    position: relative;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+    /* background-color: #f1f1f1; */
+    cursor: pointer;
+    border: 1px solid #2C2E33;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    color: #2C2E33;
+    height: 2.5rem;
+
+  }
+  .dropdownbuttons {
+    position: relative;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+    /* background-color: #f1f1f1; */
+    cursor: pointer;
+    border: 1px solid #2C2E33;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    color: #2C2E33;
+    height: 2.5rem;
+
+  }
+  @media (min-width: 1200px) {
+    .maincontainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      
+    }
+    .dropdownbuttons {
+      position: relative;
+      padding: 0.5rem 1rem;
+      gap: 10px;
+      /* background-color: #f1f1f1; */
+      cursor: pointer;
+      border: 1px solid #2C2E33;
+      border-radius: 10px;
+      display: none !important;
+      flex-direction: row;
+      color: #2C2E33;
+      height: 2.5rem;
   
+    }
+  }
+  @media (min-width: 800px) and (max-width: 1199px) {
+    .dropdownbutton {
+      
+      display: none;
+    }
+    .maincontainer {
+      width: 100%;
+      display: block;
+      
+      
+    }
+    .carcatalog {
+      padding: 1rem;
+      text-align: center;
+      width: 100%;
+      
+    }
+    .dropdowncontainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      
+     gap: 7.67px;
+      width: 100%;
+    }
+  }
+  .dropdownbuttons {
+    position: relative;
+    padding: 0.5rem 1rem;
+    gap: 10px;
+    /* background-color: #f1f1f1; */
+    cursor: pointer;
+    border: 1px solid #2C2E33;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    color: #2C2E33;
+    height: 2.5rem;
+
+  }
   .carcatalog {
     padding: 1rem;
     text-align: center;
@@ -14,50 +110,47 @@
   }
   
   .heading {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.9rem;
+    font-weight: 900 ;
     text-align: left;
+    line-height: 33px;
   }
   
   .text {
     font-size: 1.1rem;
     text-align: left;
-    color: grey;
+    color: #2C2E33;
+    line-height: 140%;
   }
   
-  .dropdowncontainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    z-index: 1;
-   
-    /* width: 50%; */
-  }
+  
   
   .dropdownbutton {
     position: relative;
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    gap: 10px;
     /* background-color: #f1f1f1; */
     cursor: pointer;
-    border: 1px solid grey;
+    border: 1px solid #2C2E33;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    color: #2C2E33;
     height: 2.5rem;
 
   }
   
   .dropdownmenu {
     display: none;
+    margin-top: 0.5rem;
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 1rem;
+  
     background-color: white;
     border-radius: 1rem;
-    width: 200px;
+    width: 327.64px;
+height: 201.77px;
     box-shadow: -1px 4px 123px -49px rgba(41,15,207,0.67);
     -webkit-box-shadow: -1px 4px 123px -49px rgba(41,15,207,0.67);
     -moz-box-shadow: -1px 4px 123px -49px rgba(41,15,207,0.67);
@@ -66,6 +159,7 @@
 
   .dropdownbutton:hover .dropdownmenu {
     display: block;
+    z-index: 11;
     
   }
   
@@ -73,10 +167,11 @@
     display: flex;
     flex-direction:row ;
     gap:10px;
-    margin-bottom: 0.25rem;
+    padding: 0.5rem;
     width: 100%;
-    font-size: 1rem;
-   
+    font-size: 1.2rem;
+   align-items: center;
+   z-index: 11 !important;
 
 
   }
@@ -88,11 +183,12 @@
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     font-size: 2rem;
+    margin-left: 0.5rem;
   }
   .notify{
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #F59660;
+    background: #F79761;
     border-radius: 50%;
     padding: 0.1rem;
     color: white;

@@ -8,6 +8,11 @@ import PropaneIcon from "@mui/icons-material/Propane";
 import LocalGasStationIcon from "@mui/icons-material/LocalGasStation";
 import AirlineSeatReclineNormalIcon from "@mui/icons-material/AirlineSeatReclineNormal";
 import data from "../../constant/data";
+import React, { useState } from "react";
+import styling from "./dropdown.module.css";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import CalendarPicker from "./CalenderDatePicker";
+
 function Home() {
   const Card = ({ carName, price, imageUrl, cylinder, seats, mpg }) => {
     return (
@@ -16,14 +21,14 @@ function Home() {
         <p className={styles.cardprice}>
           <span className={styles.Dollar}>$</span>
           <span className={styles.cardheadings}>{price}</span>
-          <span className={styles.days}>/Days</span>
+          <span className={styles.days}>/ days</span>
         </p>
         <Image className={styles.cardimage} src={imageUrl} alt={carName} />
         {/* <button className={styles.cardbutton}>Buy Now</button> */}
         <div className={styles.cardBottom}>
           <div className={styles.cardBottomChild}>
             <PropaneIcon />
-            <p className={styles.iconTextCard}>{cylinder} Cylinder</p>
+            <p className={styles.iconTextCard}>{cylinder} cylinder</p>
           </div>
           <div className={styles.cardBottomChild}>
             <AirlineSeatReclineNormalIcon />
@@ -36,6 +41,11 @@ function Home() {
         </div>
       </div>
     );
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const handleButtonClick = () => {
+    setIsOpen(!isOpen);
   };
 
   // const [data, setData] = useState(null);
@@ -89,6 +99,27 @@ function Home() {
             <button className={styles.registerbutton}>Register</button>
             <button className={styles.signinbutton}>Sign In</button>
           </div>
+          <div className={styling.dropdownbuttons}>
+            Menu
+            <KeyboardArrowDownIcon />
+            <div className={styling.dropdownmenu}>
+              <div className={styling.custom}>
+                <label htmlFor="price-sedan">Home</label>
+              </div>
+              <hr style={{ width: "327.64px" }} />
+              <div className={styling.custom}>
+                <label htmlFor="price-sedan">Cntact Us</label>
+              </div>
+              <hr />
+              <div className={styling.custom}>
+                <label htmlFor="price-sedan">Help</label>
+              </div>
+              <hr />
+              <div className={styling.custom}>
+                <label htmlFor="price-sedan">Support</label>
+              </div>
+            </div>
+          </div>
         </nav>
         {/* GROUPS*/}
         <div className={styles.parentContainer}>
@@ -99,22 +130,24 @@ function Home() {
               borderBottomLeftRadius: "3rem",
             }}
           >
+            <div className="text-container">New Zealand</div>
             <div className={styles.iconcontainer}>
               <LocationOnIcon />
             </div>
-            <div className="text-container">New Zealand</div>
           </div>
           <div className={styles.childContainer}>
-            <div className={styles.iconcontainer}>
+            {/* <div className={styles.iconcontainer} onClick={handleButtonClick}>
               <CalendarMonthIcon />
-            </div>
-            <div className="text-container">27/11/2020</div>
+            </div> */}
+
+            <CalendarPicker />
           </div>
           <div className={styles.childContainer}>
-            <div className={styles.iconcontainer}>
+            {/* <div className={styles.iconcontainer} onClick={handleButtonClick}>
               <CalendarMonthIcon />
-            </div>
-            <div className="text-container">30/11/2020</div>
+            </div> */}
+
+            <CalendarPicker />
           </div>
           <div
             className={styles.childContainer}

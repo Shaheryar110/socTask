@@ -15,6 +15,22 @@ const data = [
     mpg: "3.5",
   },
   {
+    carName: "Honda Civic",
+    price: "34",
+    imgUrl: car1,
+    cylinder: "2",
+    seats: "4",
+    mpg: "3.5",
+  },
+  {
+    carName: "Indus Carolla",
+    price: "34",
+    imgUrl: car1,
+    cylinder: "2",
+    seats: "4",
+    mpg: "3.5",
+  },
+  {
     carName: "Toyota Carolla",
     price: "34",
     imgUrl: car2,

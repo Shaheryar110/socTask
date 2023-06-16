@@ -17,7 +17,7 @@ const CarCatelogue = () => {
               <input type="checkbox" id="price-sedan" />
               <label htmlFor="price-sedan">Sedan</label>
             </div>
-            <hr />
+            <hr style={{ width: "327.64px" }} />
             <div className={styling.custom}>
               <input type="checkbox" id="price-sedan" />
               <label htmlFor="price-sedan">VOUN</label>
