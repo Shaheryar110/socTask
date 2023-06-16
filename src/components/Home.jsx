@@ -104,7 +104,9 @@ function Home() {
             <KeyboardArrowDownIcon />
             <div className={styling.dropdownmenu}>
               <div className={styling.custom}>
-                <label htmlFor="price-sedan">Home</label>
+                <label id="price-sedan" htmlFor="price-sedan">
+                  Sedan
+                </label>
               </div>
               <hr style={{ width: "327.64px" }} />
               <div className={styling.custom}>

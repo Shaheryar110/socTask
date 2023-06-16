@@ -381,6 +381,13 @@ line-height: 13px;
   }
 }
 @media (max-width: 691px) {
+  .parentContainer {
+    display: none;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
   .centersection{
     display: none;
   }
@@ -401,6 +408,14 @@ line-height: 13px;
   -moz-box-shadow: -1px 4px 123px -49px rgba(41,15,207,0.22);
   
   transition: all 0.4s ease;
+  }
+  .cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap:1rem;
+    
   }
 }
 
